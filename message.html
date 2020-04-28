@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="Content-Language" content="en" />
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="theme-color" content="#4188c9">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<link rel="icon" href="./assets/images/logo.png" type="image/x-icon"/>
+		<link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.png" />
+		
+		<title> Bus Reservation </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+		<script src="./assets/js/require.min.js"></script>
+		<script>
+		  requirejs.config({
+			  baseUrl: '.'
+		  });
+		</script>
+		<!-- Dashboard Core -->
+		<link href="./assets/css/dashboard.css" rel="stylesheet" />
+		<script src="./assets/js/dashboard.js"></script>
+		<!-- c3.js Charts Plugin -->
+		<link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+		<script src="./assets/plugins/charts-c3/plugin.js"></script>
+		<!-- Google Maps Plugin -->
+		<link href="./assets/plugins/maps-google/plugin.css" rel="stylesheet" />
+		<script src="./assets/plugins/maps-google/plugin.js"></script>
+		<!-- Input Mask Plugin -->
+		<script src="./assets/plugins/input-mask/plugin.js"></script>
+	</head>
+	
+  <body class="">
+    <div class="page">
+      <div class="page-main">
+        <div class="header py-4">
+          <div class="container">
+            <div class="d-flex">
+              <a class="header-brand" href="./index.html">
+                <img src="./assets/images/logo.png" class="header-brand-img" alt="logo">
+              </a>
+			  
+              <div class="d-flex order-lg-2 ml-auto">
+               
+                <div class="dropdown d-none d-md-flex">
+                  <a class="nav-link icon" data-toggle="dropdown">
+                    <i class="fe fe-bell"></i>
+                    <span class="nav-unread"></span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a href="#" class="dropdown-item d-flex">
+                      <div>
+                        <strong>BUS</strong> just arrive at New Site Station.
+                        <div class="small text-muted">10 minutes ago</div>
+                      </div>
+                    </a>
+                    <a href="#" class="dropdown-item d-flex">
+                      <div>
+                        <strong>BUS</strong> just arrive at Old Site Station.
+                        <div class="small text-muted">1 hour ago</div>
+                      </div>
+                    </a>
+                    <a href="#" class="dropdown-item d-flex">
+                      <div>
+                        <strong>BUS</strong> just depart to Old Site Campus.
+                        <div class="small text-muted">2 hours ago</div>
+                      </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item text-center text-muted-dark">Mark all as read</a>
+                  </div>
+                </div>
+				
+				
+                <div class="dropdown">
+                  <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+				  
+					<span class="avatar avatar-cyan" style="background-image:url(./demo/faces/female/25.jpg)"> JS</span>
+				  
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Jamilu Salisu</span>
+                      <small class="text-muted d-block mt-1">Administrator</small>
+                    </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="profile.html">
+                      <i class="dropdown-icon fe fe-user"></i> Profile
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="message.html">
+                      <i class="dropdown-icon fe fe-help-circle"></i> Need help?
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <span class="header-toggler-icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-3 ml-auto">
+                <form class="input-icon my-3 my-lg-0">
+                  <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+                  <div class="input-icon-addon">
+                    <i class="fe fe-search"></i>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="./fundwallet.html" class="nav-link"><i class="fe fe-check-square"></i> Fund Wallet</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="./booking.html" class="nav-link"><i class="fe fe-check-square"></i> Booking</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./transactions.html" class="nav-link"><i class="fe fe-image"></i> Transactions </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./message.html#contact_us" class="nav-link"><i class="fe fe-file-text"></i> Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		
+        <div class="my-3 my-md-5">
+          <div class="container">
+            <div class="row">
+              
+			  <div class="col-md-2">
+			  </div>
+			  
+              <div class="col-md-8">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Contact us</h3>
+                  </div>
+                  <div class="card-body">
+				  
+				  
+				  
+                    <form action="">
+                      <div class="form-group">
+                        <div class="row align-items-center">
+                          <label class="col-sm-12">
+						  
+						  Got a question or need to speak to us about something? Choose from the list below so we can get you to the right team.
+						  
+						  </label>
+						  
+                          
+						  
+                        </div>
+                      </div>
+					  
+					  <hr/>
+					  <h2 class="card-title text-center" id="contact_us"> <strong>Contact Customer Care </strong></h2>
+                      <div class="form-group">
+                        <div class="row align-items-center">
+                          <label class="col-sm-2">Subject:</label>
+                          <div class="col-sm-10">
+                            <select class="form-control custom-select" name="message_subject" id="message_subject" required>
+								<option ></option>
+								<option value="Compliment">Compliment</option>
+								<option value="Complaint">Complaint</option>
+								<option value="Question">Question</option>
+								<option value="Suggestion">Suggestion</option>
+							</select>
+                          </div>
+                        </div>
+                      </div>
+                      <textarea rows="10" class="form-control" placeholder="Your message" name="message_body" id="message_body" required></textarea>
+                      <div class="btn-list mt-4 text-right">
+                        <button type="reset" name="reset_support" id="reset_support" class="btn btn-secondary btn-space">Reset</button>
+                        <button type="submit" name="send_message" id="send_message" class="btn btn-primary btn-space">Send message</button>
+                      </div>
+                    </form>
+					
+					<hr/>
+					  <h2 class="card-title text-center" id="contact_us"> <strong>Support Treatment Log </strong></h2>
+					  <div class="card-body">
+					<table id="dt-vertical-scroll" class="table" cellspacing="0" width="100%">
+					  <thead>
+						<tr>
+						  <th class="th-sm">Reference</th>
+						  <th class="th-sm">Date Submitted</th>
+						  <th class="th-sm">Status</th>
+						  <th class="th-sm"></th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>CCS001122</td>
+						  <td>22:07 2020/04/28</td>
+						  <td>Resolve</td>
+						  <td><i class="fe fe-external-link" data-toggle="tooltip" title="view"></i> </td>
+						</tr>
+						<tr>
+						  <td>CCS001133</td>
+						  <td>22:07 2020/04/27</td>
+						  <td>Awaiting Action</td>
+						  <td><i class="fe fe-external-link" data-toggle="tooltip" title="view"></i> </td>
+						</tr>
+						<tr>
+						  <td colspan="4" class="text-center">
+								You have not yet log any treatment. Future log treatment will appear here.
+						  </td>
+						</tr>
+					  </tbody>
+					</table>
+					
+                  </div>
+					
+					
+                  </div>
+                </div>
+              </div>
+			  
+			  
+            </div>
+          </div>
+        </div>
+      </div>
+     
+	 
+    </div>
+  </body>
+</html>
